@@ -22,7 +22,7 @@ jobs:
         
       - name: compile
         run: |
-            clang -O3 -o ./ruffle.dll ruffle.c
+            clang -O3 -shared -o ./ruffle.dll ruffle.c
 
       - name: Upload artifact
         if: matrix.os == 'ubuntu-latest'
